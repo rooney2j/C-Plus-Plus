@@ -23,6 +23,8 @@ public:
     // Copy constructor
     Vehicle(const Vehicle& otherVehicle);
 
+    Vehicle& operator= (const Vehicle& otherVehicle);
+
     void SetNumberOfSits(std::uint32_t numberOfSits);
     std::uint32_t GetNumberOfSits() const;
     //TODO get and set for color

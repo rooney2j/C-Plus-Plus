@@ -3,21 +3,21 @@
 #include "Vehicle.h"
 
 
-void foo(const Vehicle &v)
+void foo(Vehicle &v)
 {
-    //v.SetNumberOfSits(20);
-    std::cout<<v.GetNumberOfSits()<<"\n";
+    //std::cout << v << "\n";
+}
+
+void foo(Vehicle &&v)
+{
+    //std::cout << v << "\n";
 }
 
 int main()
 {
-    Vehicle moto{2, "black"};
+    Vehicle moto{2, "green"};
 
-    foo(moto);
-
-    moto.SetNumberOfSits(4);
-
-    std::cout << moto.GetNumberOfSits() << "\n";
+    foo({4, "black"});
 
     std::cout<<"End\n";
     return 0;

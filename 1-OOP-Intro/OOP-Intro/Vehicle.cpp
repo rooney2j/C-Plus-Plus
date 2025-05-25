@@ -23,6 +23,14 @@ Vehicle::~Vehicle()
     std::cout<<"destructor\n";
 }
 
+Vehicle& Vehicle::operator=(const Vehicle& otherVehicle)
+{
+    this->NumberOfSits = otherVehicle.GetNumberOfSits();
+    this->Color = otherVehicle.Color;
+
+    return *this;
+}
+
 void Vehicle::SetNumberOfSits(std::uint32_t numberOfSits)
 {
     this->NumberOfSits = numberOfSits;
